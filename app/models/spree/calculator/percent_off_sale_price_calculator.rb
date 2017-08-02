@@ -6,7 +6,7 @@ module Spree
     end
 
     def compute(sale_price)
-      (1.0 - sale_price.value.to_f/100.0) * sale_price.price.variant.original_price.to_f
+      ((1.0 - sale_price.value.to_f/100.0) * sale_price.price.variant.original_price.to_f).round(0)
     end
   end
 end
